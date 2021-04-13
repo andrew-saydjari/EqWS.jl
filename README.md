@@ -8,9 +8,9 @@ Please find an example notebook that runs DHC on image slices loaded from FITS f
 
 ## Workflow
 
-The main workflow (as of 2021/02/10) is to compute the filterbank using DHC.fink_filter_hash and then call DHC_compute(image,filterbank,filterbank).
+The main workflow (as of 2021/04/13) is to compute the filterbank using DHC.fink_filter_hash and then call DHC_compute(image,filterbank).
 
-The DHC currently computes second-order convolutions in direct analogy with WST, but always sums power (abs^2) over images rather than just summing the abs. Other second-order couplings are under development and are experimental. Passing the filterbank twice allows the user to specify a different filterbank for the first and second convolutions. This has not yielded particularly compelling results and will be deprecated (or at least made an implicit argument) in the near future.
+The DHC currently computes second-order convolutions in direct analogy with WST, but always sums power (abs^2) over images rather than just summing the abs. Other second-order couplings are under development and are experimental. Passing the filterbank twice allows the user to specify a different filterbank for the first and second convolutions. This has not yielded particularly compelling results but can be accessed with the `filter_hash2` implicit arg.
 
 ## Method Parameters
 
@@ -20,7 +20,7 @@ Most of the parameters users will want to adjust are found in the compilation of
 filter_hash = fink_filter_hash(1,8,nx=256,wd=2)
 `
 
-The first argument (c) specifies the step size of scale (J) for the wavelets. For c=1, there are J = log_2(N_pixels)-2 radial bins. One bin near the origin of Fourier space is excluded because it is not well sampled (and it is compensated for by a catch all filter phi) and one bin near the edges of the Fourier plane is also excluded because it is not well sampled in real space. For c = 2, there are 2xJ radial bins, a half-dyadic spacing (higher c are implemented for those interested, but generally does seem to significantly improve the statistics at least for small images ~256^ pixels).
+The first argument (c) specifies the step size of scale (J) for the wavelets. For c=1, there are J = log_2(N_pixels)-2 radial bins. One bin near the origin of Fourier space is excluded because it is not well sampled (and it is compensated for by a catch all filter phi) and one bin near the edges of the Fourier plane is also excluded because it is not well sampled in real space. For c = 2, there are 2xJ radial bins, a half-dyadic spacing (higher c are implemented for those interested, but generally does seem to significantly improve the statistics at least for small images ~256^2 pixels).
 
 The second argument is L, the number of angular bins. Default should be L=8. We do sometimes run with L=16. 
 
