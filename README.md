@@ -1,10 +1,10 @@
 # EqWS
 
-These are temporary docs. Full versions will be available once a more stable version is established (said every developer ever). Due to active development, we recommend forking the repository to prevent changes in syntax from confounding users. EqWS was previously called DHC and is currently actively developed at https://github.com/andrew-saydjari/DHC.
+These are temporary docs. Full versions will be available once a more stable version is established (said every developer ever). Due to active development, we recommend forking the repository to prevent changes in syntax from confounding users. EqWS was previously called DHC and is currently actively developed at https://github.com/andrew-saydjari/DHC, stable versions appearing here.
 
 ## Example
 
-Please find an example notebook that runs DHC on image slices loaded from FITS files in from_cannon/2021_02_05. This is an example of the parallelized code suitable for computation across many cores on a single node (here 30). In this example, we calculated 2542 coeff per image on 800230 images in <2.5h. 
+Please find an example notebook that runs DHC on image slices loaded from FITS files in examples/2021_02_05. This is an example of the parallelized code suitable for computation across many cores on a single node (here 30). In this example, we calculated 2542 coeff per image on 800230 images in <2.5h. 
 
 ## Workflow
 
