@@ -39,3 +39,5 @@ Please feel free to post issues and questions about the package or contact andre
 ## FAQ
 
 We are actively developing GPU capabilities but they are not yet implemented. Sparse 3D wavelets are also in process.
+
+<img width="0" src="https://visitor-badge.glitch.me/badge?page_id=andrew-saydjari.EqWS.jl" />
