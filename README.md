@@ -1,4 +1,4 @@
-# EqWS
+# EqWS <img src="examples/logo_EqWS.png" alt="EqWS Logo" width="200" align="right"/>
 
 These are temporary docs. Full versions will be available once a more stable version is established (said every developer ever). Due to active development, we recommend forking the repository to prevent changes in syntax from confounding users. EqWS was previously called DHC and is currently actively developed at https://github.com/andrew-saydjari/DHC, stable versions appearing here.
 
